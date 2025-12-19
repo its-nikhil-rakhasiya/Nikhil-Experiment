@@ -30,7 +30,7 @@ CREATE TABLE `banned_emails` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `banned_emails` (`id`, `email`, `reason`, `banned_by`, `created_at`) VALUES
-(1, 'rahul@gmail.com', 'Banned by admin from Users tab', 'Admin', '2025-12-14 11:46:05');
+(1, 'demo@gmail.com', 'Banned by admin from Users tab', 'Admin', '2025-12-14 11:46:05');
 
 -- Table structure for table `users`
 CREATE TABLE `users` (
@@ -47,7 +47,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `email`, `password`, `full_name`, `is_banned`, `created_at`, `updated_at`) VALUES
 (1, 'nikhil@gmail.com', 'nikhil', 'Nikhil', 0, '2025-12-14 05:27:48', '2025-12-14 05:27:48'),
-(2, 'rahul@gmail.com', 'rahul', 'Rahul', 1, '2025-12-14 05:27:48', '2025-12-14 11:46:05');
+(2, 'demo@gmail.com', 'demo', 'demo', 1, '2025-12-14 05:27:48', '2025-12-14 11:46:05');
 
 -- Table structure for table `sweets`
 CREATE TABLE `sweets` (
