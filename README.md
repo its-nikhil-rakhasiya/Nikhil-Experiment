@@ -10,10 +10,7 @@
 > **Incubyte Technical Assignment Submission**
 
 I developed this project as part of the **Incubyte Sweet Shop Management System** technical assignment. My goal was to build a **clean, full-stack application** that manages sweets, inventory, and purchases while following real-world business rules and clean coding practices.
-
-> [!NOTE]
-> **2024 Modernization Update**: The application has been upgraded to a **Distributed Cloud Architecture** for production readiness and now features an **Enforced Light Theme** for a cleaner, more professional interface.
-
+    
 ---
 
 ## � Modern Architecture & Hosting
