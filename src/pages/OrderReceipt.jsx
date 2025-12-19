@@ -12,7 +12,8 @@ export default function OrderReceipt() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:3001/api/orders/${orderId}`)
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+        fetch(`${API_URL}/api/orders/${orderId}`)
             .then(res => {
                 if (res.status === 404) {
                     setNotFound(true);

@@ -16,7 +16,8 @@ export default function Home() {
   const { addToCart, cartItems } = useCart();
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/sweets')
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+    fetch(`${API_URL}/api/sweets`)
       .then(res => res.json())
       .then(data => {
         setSweets(data);

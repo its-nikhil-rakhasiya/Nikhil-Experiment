@@ -13,7 +13,8 @@ export default function OrderHistory() {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:3001/api/orders/user/${user.id}`)
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            fetch(`${API_URL}/api/orders/user/${user.id}`)
                 .then(res => res.json())
                 .then(data => {
                     setOrders(data);

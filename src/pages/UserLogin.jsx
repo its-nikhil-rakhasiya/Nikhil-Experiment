@@ -60,7 +60,8 @@ export default function UserLogin() {
             }
 
             try {
-                const response = await fetch('http://localhost:3001/api/register', {
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                const response = await fetch(`${API_URL}/api/register`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
@@ -84,7 +85,8 @@ export default function UserLogin() {
             }
         } else {
             try {
-                const response = await fetch('http://localhost:3001/api/user/login', {
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+                const response = await fetch(`${API_URL}/api/user/login`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
