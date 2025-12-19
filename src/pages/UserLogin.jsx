@@ -112,11 +112,11 @@ export default function UserLogin() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-md"
+                className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md"
             >
                 <div className="text-center mb-8">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-4">
@@ -126,10 +126,10 @@ export default function UserLogin() {
                             <LogIn className="h-8 w-8 text-white" />
                         )}
                     </div>
-                    <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
+                    <h1 className="text-3xl font-bold text-gray-800">
                         {isRegistering ? 'Create Account' : 'Welcome Back'}
                     </h1>
-                    <p className="text-gray-600 dark:text-gray-400 mt-2">
+                    <p className="text-gray-600 mt-2">
                         {isRegistering
                             ? 'Sign up to start ordering delicious sweets'
                             : 'Login to your account'}
@@ -149,7 +149,7 @@ export default function UserLogin() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                     {isRegistering && (
                         <div>
-                            <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                            <label className="block text-gray-700 mb-2 font-medium">
                                 Full Name
                             </label>
                             <div className="relative">
@@ -159,7 +159,7 @@ export default function UserLogin() {
                                     name="full_name"
                                     value={formData.full_name}
                                     onChange={handleInputChange}
-                                    className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 dark:bg-gray-700 dark:text-white"
+                                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                                     placeholder="Enter your full name"
                                 />
                             </div>
@@ -167,7 +167,7 @@ export default function UserLogin() {
                     )}
 
                     <div>
-                        <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                        <label className="block text-gray-700 mb-2 font-medium">
                             Email Address
                         </label>
                         <div className="relative">
@@ -177,14 +177,14 @@ export default function UserLogin() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleInputChange}
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 dark:bg-gray-700 dark:text-white"
+                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                                 placeholder="Enter your email"
                             />
                         </div>
                     </div>
 
                     <div>
-                        <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                        <label className="block text-gray-700 mb-2 font-medium">
                             Password
                         </label>
                         <div className="relative">
@@ -194,12 +194,12 @@ export default function UserLogin() {
                                 name="password"
                                 value={formData.password}
                                 onChange={handleInputChange}
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 dark:bg-gray-700 dark:text-white"
+                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                                 placeholder="Enter your password"
                             />
                         </div>
                         {isRegistering && (
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                            <p className="text-sm text-gray-500 mt-1">
                                 Must be at least 6 characters
                             </p>
                         )}
@@ -223,7 +223,7 @@ export default function UserLogin() {
                             setError('');
                             setFormData({ email: '', password: '', full_name: '' });
                         }}
-                        className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                        className="text-blue-600 hover:underline font-medium"
                     >
                         {isRegistering
                             ? 'Already have an account? Login'
@@ -234,7 +234,7 @@ export default function UserLogin() {
                 <div className="mt-4 text-center">
                     <Link
                         to="/"
-                        className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
+                        className="text-gray-600 hover:text-gray-800"
                     >
                         ← Back to Home
                     </Link>
